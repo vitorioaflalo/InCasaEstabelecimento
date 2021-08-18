@@ -28,11 +28,11 @@ class HistoricoPageState extends State<HistoricoPage> {
             },
             child: Icon(
               Icons.arrow_back,
-              color: Colors.red[500],
+              color: Colors.red[900],
             )),
         title: Text(
           'Histórico de entregas',
-          style: TextStyle(color: Colors.red[500], fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.red[900], fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(

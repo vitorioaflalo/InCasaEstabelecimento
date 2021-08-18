@@ -32,7 +32,7 @@ class StartPageState extends State<StartPage> {
             print('teste');
             setState(() {
               _currentPage = 0;
-              Modular.to.navigate('/start/home/');
+              Modular.to.navigate('/start/home');
             });
           },
         ),

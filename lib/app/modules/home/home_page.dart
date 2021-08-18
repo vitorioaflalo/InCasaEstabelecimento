@@ -18,20 +18,28 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
     return Scaffold(
         body: Padding(
       padding: const EdgeInsets.fromLTRB(30, 100, 30, 30),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          buildDefContainer(
-              text: 'Solicitar Entrega', rota: '/solicitarEntrega/'),
-          Padding(padding: EdgeInsets.only(top: 30)),
-          buildDefContainer(
-              text: 'Acompanhar Entregas', rota: '/acompanharEntregas/'),
-          Padding(padding: EdgeInsets.only(top: 30)),
-          buildDefContainer(text: 'Histórico', rota: '/historico/'),
-          Padding(padding: EdgeInsets.only(top: 30)),
-          buildDefContainer(text: 'Relatório', rota: '/relatorio/'),
-          Padding(padding: EdgeInsets.only(top: 30)),
-        ],
+      child: LayoutBuilder(
+        builder: (_, constraints) {
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              buildDefContainer(
+                constraints,
+                  text: 'Solicitar Entrega', rota: '/solicitarEntrega/',),
+              Padding(padding: EdgeInsets.only(top: 30)),
+              buildDefContainer(constraints,
+                  text: 'Acompanhar Entregas', rota: '/acompanharEntregas/'),
+              Padding(padding: EdgeInsets.only(top: 30)),
+              buildDefContainer(constraints,
+                  text: 'Histórico', rota: '/historico/'),
+              Padding(padding: EdgeInsets.only(top: 30)),
+              buildDefContainer(constraints,
+                  text: 'Relatório', rota: '/relatorio/'),
+              Padding(padding: EdgeInsets.only(top: 30)),
+            ],
+          );
+        }
+
       ),
     ));
   }

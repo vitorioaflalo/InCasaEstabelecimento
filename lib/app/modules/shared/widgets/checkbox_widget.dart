@@ -6,14 +6,14 @@ builderCheckBox({String text, bool value}) {
       Radio(
         hoverColor: Colors.pink,
         groupValue: value,
-        activeColor: Colors.red[600],
+        activeColor: Colors.red[900],
         value: true,
         onChanged: (value) {},
       ),
       Text(
         text,
         style: TextStyle(
-            color: Colors.red[500], fontWeight: FontWeight.bold, fontSize: 14),
+            color: Colors.red[900], fontWeight: FontWeight.bold, fontSize: 14),
       )
     ],
   );

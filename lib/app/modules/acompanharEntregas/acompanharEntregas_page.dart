@@ -27,11 +27,11 @@ class AcompanharEntregasPageState extends State<AcompanharEntregasPage> {
             },
             child: Icon(
               Icons.arrow_back,
-              color: Colors.red[500],
+              color: Colors.red[900],
             )),
         title: Text(
           'Acompanhar Solicitação',
-          style: TextStyle(color: Colors.red[500], fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.red[900], fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
