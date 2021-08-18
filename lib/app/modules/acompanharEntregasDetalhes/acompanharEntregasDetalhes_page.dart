@@ -24,7 +24,7 @@ class AcompanharEntregasDetalhesPageState
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        shadowColor: Colors.red[500],
+        shadowColor: Colors.red[900],
         backgroundColor: Colors.white,
         leading: GestureDetector(
             onTap: () {
@@ -32,11 +32,11 @@ class AcompanharEntregasDetalhesPageState
             },
             child: Icon(
               Icons.arrow_back,
-              color: Colors.red[500],
+              color: Colors.red[900],
             )),
         title: Text(
           'Acompanhar Solicitação',
-          style: TextStyle(color: Colors.red[500], fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.red[900], fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
