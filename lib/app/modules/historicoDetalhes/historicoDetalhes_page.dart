@@ -23,7 +23,7 @@ class HistoricoDetalhesPageState extends State<HistoricoDetalhesPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        shadowColor: Colors.red[500],
+        shadowColor: Colors.red[900],
         backgroundColor: Colors.white,
         leading: GestureDetector(
             onTap: () {
@@ -31,11 +31,11 @@ class HistoricoDetalhesPageState extends State<HistoricoDetalhesPage> {
             },
             child: Icon(
               Icons.arrow_back,
-              color: Colors.red[500],
+              color: Colors.red[900],
             )),
         title: Text(
           'Avaliar entrega',
-          style: TextStyle(color: Colors.red[500], fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.red[900], fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
