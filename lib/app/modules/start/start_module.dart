@@ -4,6 +4,8 @@ import 'package:incasaestabelecimento/app/modules/acompanharEntregasDetalhes/aco
 import 'package:incasaestabelecimento/app/modules/historico/historico_module.dart';
 import 'package:incasaestabelecimento/app/modules/historicoDetalhes/historicoDetalhes_module.dart';
 import 'package:incasaestabelecimento/app/modules/home/home_module.dart';
+import 'package:incasaestabelecimento/app/modules/home/home_store.dart';
+import 'package:incasaestabelecimento/app/modules/login/login_module.dart';
 import 'package:incasaestabelecimento/app/modules/perfil_estabelecimento/perfil_module.dart';
 import 'package:incasaestabelecimento/app/modules/perfil_estabelecimento/perfil_page.dart';
 import 'package:incasaestabelecimento/app/modules/relatorio/relatorio_module.dart';
@@ -15,6 +17,7 @@ class StartModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.lazySingleton((i) => StartStore()),
+    Bind.lazySingleton((i) => HomeStore()),
   ];
 
   @override

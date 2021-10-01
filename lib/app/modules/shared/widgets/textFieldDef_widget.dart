@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 builderTextField({
   TextEditingController textEditingController,
@@ -12,6 +11,6 @@ builderTextField({
         filled: true,
         fillColor: Colors.white,
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
-        hintText: '$hint'),
+        hintText: '$hint', hintStyle: TextStyle(color: Colors.black)),
   );
 }

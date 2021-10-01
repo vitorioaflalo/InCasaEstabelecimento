@@ -26,6 +26,7 @@ class text_field_meio extends StatelessWidget {
                     enabled: false,
                     decoration: InputDecoration(
                         labelText: title2,
+                        labelStyle: TextStyle(color: Colors.black),
                         disabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
                               width: 2, color: Colors.red.shade900),

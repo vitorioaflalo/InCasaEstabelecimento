@@ -11,6 +11,6 @@ class HistoricoDetalhesModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, args) => HistoricoDetalhesPage()),
+    ChildRoute('/', child: (_, args) => HistoricoDetalhesPage(args.data)),
   ];
 }

@@ -11,7 +11,7 @@ Widget buildDefContainer(BoxConstraints constraints, {String text, String rota, 
     child: ClipRRect(
         borderRadius: BorderRadius.circular(40),
         child: Container(
-          height: constraints.maxHeight*0.2,
+          height: constraints.maxHeight*0.15,
           color: Color.fromRGBO(208, 84, 85, 1),
           child: Center(
             child: Text(
