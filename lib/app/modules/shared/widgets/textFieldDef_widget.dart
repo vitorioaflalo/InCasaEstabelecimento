@@ -7,6 +7,7 @@ builderTextField({
 }) {
   return TextFormField(
     controller: textEditingController,
+    enabled: false,
     decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,

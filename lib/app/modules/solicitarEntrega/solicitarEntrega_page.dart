@@ -260,7 +260,7 @@ class SolicitarEntregaPageState extends State<SolicitarEntregaPage> {
                         });
                       }),
                   Text(
-                    'Cartão de crédito/Débito',
+                    'Cartão',
                     style: TextStyle(
                         color: Colors.red[900],
                         fontWeight: FontWeight.bold,
@@ -405,7 +405,7 @@ class SolicitarEntregaPageState extends State<SolicitarEntregaPage> {
                                               nomeCliente:
                                                   _nomeClienteController.text,
                                               pagamento: _value == 1
-                                                  ? 'Cartão de Crédito/Débito'
+                                                  ? 'Cartão'
                                                   : 'Dinheiro',
                                               pontoReferencia:
                                                   _pontoReferenciaController

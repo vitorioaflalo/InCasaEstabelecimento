@@ -15,7 +15,7 @@ Future<List<HistoricoModel>> getUsers() async {
 
   try {
     response = await dio.get(
-        'https://api-incasa.herokuapp.com/api/entrega/?id=&Estabelecimento=12');
+        'https://api-incasa.herokuapp.com/api/entrega/?id=&Estabelecimento=$id');
     response2 = await dio
         .get('https://api-incasa.herokuapp.com/api/usuarioentregador/');
     print(response.data.toString());
@@ -49,8 +49,6 @@ Future<List<HistoricoModel>> getUsers() async {
             listUser[i].cargaMaiorHabitual,
             listUser[i].celular,
           ));
-          print(listUser[i].createdAt);
-          print(listEntregador[e].nomeCompleto);
         }
       }
     }

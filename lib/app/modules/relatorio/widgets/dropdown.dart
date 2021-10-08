@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DropDown_meses extends StatefulWidget {
-  const DropDown_meses({Key key}) : super(key: key);
+  final Function(int mes) onChanged;
+  const DropDown_meses({Key key, this.onChanged}) : super(key: key);
 
   @override
   _DropDown_mesesState createState() => _DropDown_mesesState();
@@ -24,9 +25,49 @@ class _DropDown_mesesState extends State<DropDown_meses> {
           color: Colors.grey,
         ),
         onChanged: (String newValue) {
+          int mes;
           setState(() {
             dropdownValue = newValue;
           });
+          switch (newValue) {
+            case 'Janeiro':
+              mes = 1;
+              break;
+            case 'Fevereiro':
+              mes = 2;
+              break;
+             case 'Março':
+              mes = 3;
+              break;
+             case 'Abril':
+              mes = 4;
+              break;
+             case 'Maio':
+              mes = 5;
+              break;
+             case 'Junho':
+              mes = 6;
+              break;
+             case 'Julho':
+              mes = 7;
+              break;
+             case 'Agosto':
+              mes = 8;
+              break;
+             case 'Setembro':
+              mes = 9;
+              break;
+             case 'Outubro':
+              mes = 10;
+              break;
+             case 'Novembro':
+              mes = 11;
+              break;
+             case 'Dezembro':
+              mes = 12;
+              break;            
+          }
+          widget.onChanged(mes);
         },
         items: <String>[
           'Selecione',

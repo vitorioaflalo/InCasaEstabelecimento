@@ -10,6 +10,6 @@ class AcompanharEntregasDetalhesModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, args) => AcompanharEntregasDetalhesPage()),
+    ChildRoute('/', child: (_, args) => AcompanharEntregasDetalhesPage(args.data)),
   ];
 }

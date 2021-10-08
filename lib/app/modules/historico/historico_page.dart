@@ -69,7 +69,7 @@ class HistoricoPageState extends State<HistoricoPage> {
                         child: CircularProgressIndicator(),
                       ),
                     );
-                  } else if (snapshot.data[0].createdAt.isEmpty) {
+                  } else if (snapshot.data.isEmpty) {
                     return Center(
                         child: Column(
                           children: [
