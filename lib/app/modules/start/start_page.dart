@@ -17,7 +17,7 @@ class StartPageState extends State<StartPage> {
     // ignore: todo
     // TODO: implement initState
     super.initState();
-    Modular.to.navigate('/start/home/');
+    Modular.to.navigate('/start/home');
     _currentPage = 0;
   }
 

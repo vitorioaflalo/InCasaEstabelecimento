@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:incasaestabelecimento/app/modules/home/widgets/containerButtonDef_widget.dart';
-import 'package:incasaestabelecimento/app/modules/login/helpers/api_service.dart';
-import 'package:incasaestabelecimento/app/modules/login/login_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'home_store.dart';
 

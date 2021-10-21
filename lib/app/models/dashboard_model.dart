@@ -2,11 +2,11 @@ class DashboardModel {
   int id;
   String tarifaMensal;
   String tarifaEntrega;
-  int total;
+  double total;
   int entregasSolicitadas;
   int entregasRealizadas;
   int entregasDevolvidas;
-  int valorReceber;
+  double valorReceber;
 
   DashboardModel(
       {this.id,

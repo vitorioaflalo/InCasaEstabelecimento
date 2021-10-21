@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incasaestabelecimento/app/models/dashboard_model.dart';
-import 'package:incasaestabelecimento/app/models/relatorio_model.dart';
+import '../../../../models/relatorio_model.dart';
 import 'package:incasaestabelecimento/app/modules/relatorio/widgets/grafico/config_grafico.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'model_grafico.dart';
@@ -17,15 +17,17 @@ class _GraficoState extends State<Grafico> {
   @override
   Widget build(BuildContext context) {
     final List<Entregas> data = [
-    Entregas(
-        entregas: 'Entregas Solicitadas:  50 ',
-        numero_entregas: widget.dashboardModel.entregasSolicitadas,
-        barColor: charts.ColorUtil.fromDartColor(Colors.red.shade900)),
-    Entregas(
-        entregas: 'Entregas Realizadas: 48',
-        numero_entregas: 48,
-        barColor: charts.ColorUtil.fromDartColor(Colors.red.shade900)),
-  ];
+      Entregas(
+          entregas:
+              'Entregas Solicitadas:  ${widget.dashboardModel.entregasSolicitadas} ',
+          numero_entregas: widget.dashboardModel.entregasSolicitadas ?? 0,
+          barColor: charts.ColorUtil.fromDartColor(Colors.red.shade900)),
+      Entregas(
+          entregas:
+              'Entregas Realizadas: ${widget.dashboardModel.entregasRealizadas}',
+          numero_entregas: widget.dashboardModel.entregasRealizadas ?? 0,
+          barColor: charts.ColorUtil.fromDartColor(Colors.red.shade900)),
+    ];
     return Column(
       children: [
         Text(

@@ -25,27 +25,28 @@ class LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(25, 200, 25, 25),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('images/logo.png'),
-            Form(
-                key: _formkey,
-                child: Center(
-                  child: SingleChildScrollView(
-                    padding: EdgeInsets.all(16),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(25, 200, 25, 25),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Image.asset('images/logo.png'),
+              Form(
+                  key: _formkey,
+                  child: Center(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Padding(padding: EdgeInsets.only(top: 25)),
-                        isLoading ? Center(child: CircularProgressIndicator()) : Text(''),
+                        isLoading
+                            ? Center(child: CircularProgressIndicator())
+                            : Text(''),
                         TextFormField(
                           decoration: InputDecoration(
-                              labelText: 'Email',
-                              labelStyle: TextStyle(color: Colors.red[900]),
-                             ),
+                            labelText: 'Email',
+                            labelStyle: TextStyle(color: Colors.red[900]),
+                          ),
                           onChanged: (text) {
                             email = text;
                           },
@@ -62,9 +63,8 @@ class LoginPageState extends State<LoginPage> {
                         ),
                         Padding(padding: EdgeInsets.only(top: 25)),
                         TextFormField(
-                          obscureText: true,
+                            obscureText: true,
                             decoration: InputDecoration(
-                              
                                 labelText: 'Senha',
                                 labelStyle: TextStyle(color: Colors.red[900])),
                             controller: _passwordController,
@@ -81,10 +81,9 @@ class LoginPageState extends State<LoginPage> {
                         Padding(padding: EdgeInsets.only(top: 25)),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(18.0),
-      
-                            ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(18.0),
+                              ),
                               primary: Colors.red[900]),
                           onPressed: isLoading
                               ? null
@@ -111,7 +110,7 @@ class LoginPageState extends State<LoginPage> {
 
                                       prefs.setString(
                                           'token', loginModel.token ?? '');
-                                            prefs.setInt('id', loginModel.userId);
+                                      prefs.setInt('id', loginModel.userId);
                                       Modular.to.navigate('/start');
                                     } else {
                                       alert(
@@ -121,7 +120,7 @@ class LoginPageState extends State<LoginPage> {
                                     }
                                   }
                                 },
-                         child: Text(
+                          child: Text(
                             'ENTRAR',
                             style: TextStyle(
                                 color: Colors.white,
@@ -129,12 +128,11 @@ class LoginPageState extends State<LoginPage> {
                                 fontSize: 18),
                           ),
                         ),
-                        
                       ],
                     ),
-                  ),
-                )),
-          ],
+                  )),
+            ],
+          ),
         ),
       ),
     );
